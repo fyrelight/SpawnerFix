@@ -23,9 +23,7 @@ public class BlockListener implements Listener {
     @EventHandler
     public void onBreakBlock (BlockBreakEvent event) {
         for (String mat : plugin.getConfig().getStringList("material")){
-            plugin.getLogger().info(mat);
             Material mat2 = Material.getMaterial(mat);
-            plugin.getLogger().info(mat2.name());
             if (event.getBlock().getType() == mat2) {
                 event.setCancelled(true);
                 event.getPlayer().sendMessage(plugin.getMessages().getString("prevent.break").replace("%block%", mat.toLowerCase()));
@@ -39,9 +37,7 @@ public class BlockListener implements Listener {
         List<Block> blockList = event.blockList();
         for (Block block : blockList) {
             for (String mat : plugin.getConfig().getStringList("material")){
-                plugin.getLogger().info(mat);
                 Material mat2 = Material.getMaterial(mat);
-                plugin.getLogger().info(mat2.name());
                 if (block.getType() == mat2) {
                     event.setCancelled(true);
                     return;
