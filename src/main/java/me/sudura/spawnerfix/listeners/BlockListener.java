@@ -65,7 +65,7 @@ public class BlockListener implements Listener {
         if (event.getSpecies() == TreeType.RED_MUSHROOM) {
             Location loc = event.getLocation();
             for(int x = -2; x <= 2; ++x) {
-                for(int y = 0; y <= 9; ++y) {
+                for(int y = 1; y <= 13; ++y) {
                     for(int z = -2; z <= 2; ++z) {
                         Material blockMat = loc.getWorld().getBlockAt(loc.getBlockX() + x, loc.getBlockY() + y, loc.getBlockZ() + z).getType();
                         for (String mat : plugin.getConfig().getStringList("material")){
