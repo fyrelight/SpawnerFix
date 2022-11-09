@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.sudura</groupId>
-    <artifactId>template</artifactId>
+    <artifactId>SpawnerFix</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -25,15 +25,13 @@
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.19.2-R0.1-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${user.home}\OneDrive - New College Swindon\IdeaProjects\libraries\paper-api\paper-api-1.19.2-R0.1-SNAPSHOT.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>co.aikar</groupId>
             <artifactId>acf-paper</artifactId>
             <version>0.5.1-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${user.home}\OneDrive - New College Swindon\IdeaProjects\libraries\acf-paper\acf-paper-0.5.1-SNAPSHOT.jar</systemPath>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

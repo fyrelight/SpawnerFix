@@ -1,4 +1,6 @@
-default: "§cJust a default command!"
-error: "§cYou're running a template!"
-reload: "§3Successfully reloaded §bconfig§3 and §bmessages§3!"
-unknown: "§cUnknown subcommand!"
+prevent:
+  break: "§cYou are not allowed to break §f%block%§c blocks."
+  grow: "§cYou are not allowed to grow red mushrooms this close to §f%block%§c blocks."
+command:
+  reload: "§3Successfully reloaded §bconfig§3 and §bmessages§3!"
+  unknown: "§cUnknown subcommand!"

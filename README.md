@@ -1,7 +1,10 @@
-# template
+# SpawnerFix
 
-sudura template for sudura plugins
+Prevents breaking, exploding and destroying using giant red mushroom
+
+Essentially the same functionality as BriteSpawners; with added config/messages customisation
 
 Configuration:
-Empty config file
-Messages file
+Materials to prevent breaking (def. Spawner)
+
+Messages file to customise error shown to players

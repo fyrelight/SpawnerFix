@@ -1,5 +1,5 @@
-name: Template
+name: SpawnerFix
 version: 1.0
 author: sudura
-main: me.sudura.template.MainClass
+main: me.sudura.spawnerfix.SpawnerFix
 api-version: 1.19

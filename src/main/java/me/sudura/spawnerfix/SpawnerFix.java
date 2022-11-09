@@ -1,23 +1,23 @@
-package me.sudura.template;
+package me.sudura.spawnerfix;
 
 import co.aikar.commands.PaperCommandManager;
-import me.sudura.template.commands.TemplateCommand;
-import me.sudura.template.listeners.BasicListener;
+import me.sudura.spawnerfix.commands.MainCommand;
+import me.sudura.spawnerfix.listeners.BlockListener;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
-public class MainClass extends JavaPlugin {
+public class SpawnerFix extends JavaPlugin {
     private File messagesFile;
     private FileConfiguration messages;
     public void onEnable() {
         PaperCommandManager manager = new PaperCommandManager(this);
         this.saveDefaultMessages();
         this.saveDefaultConfig();
-        manager.registerCommand(new TemplateCommand(this));
-        this.getServer().getPluginManager().registerEvents(new BasicListener(this), this);
+        manager.registerCommand(new MainCommand(this));
+        this.getServer().getPluginManager().registerEvents(new BlockListener(this), this);
     }
 
     public FileConfiguration getMessages() {
