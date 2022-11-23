@@ -1,6 +1,7 @@
 prevent:
   break: "§cYou are not allowed to break §f%block%§c blocks."
   grow: "§cYou are not allowed to grow red mushrooms this close to §f%block%§c blocks."
+  change: "§cYou are not allowed to change the type of a spawner."
 command:
   reload: "§3Successfully reloaded §bconfig§3 and §bmessages§3!"
   unknown: "§cUnknown subcommand!"

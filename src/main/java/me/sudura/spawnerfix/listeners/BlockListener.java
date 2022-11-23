@@ -10,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockExplodeEvent;
 import org.bukkit.event.entity.EntityExplodeEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.world.StructureGrowEvent;
 
 import java.util.List;
@@ -18,6 +19,14 @@ public class BlockListener implements Listener {
     SpawnerFix plugin;
     public BlockListener(SpawnerFix instance) {
         plugin = instance;
+    }
+
+    @EventHandler(ignoreCancelled = true)
+    public void onChangeSpawner (PlayerInteractEvent event) {
+        if (event.hasItem() && event.getItem().getType().name().endsWith("_SPAWN_EGG") && event.hasBlock() && event.getClickedBlock().getType() == Material.SPAWNER) {
+            event.setCancelled(true);
+            event.getPlayer().sendMessage(plugin.getMessages().getString("prevent.change"));
+        }
     }
 
     @EventHandler
